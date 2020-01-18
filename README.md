@@ -25,7 +25,7 @@ Run rubocop
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5
 
 * System dependencies
   - docker
