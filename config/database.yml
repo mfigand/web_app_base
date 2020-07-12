@@ -5,16 +5,18 @@ default: &default
   username: postgres
   password: <%= ENV['API_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
+  timeout: 5000
 
 development:
   <<: *default
-  database: app_development
+  database: web_app_development
 
 test:
   <<: *default
-  database: app_test
+  database: web_app_test
 
 production:
   <<: *default
-  database: app_production
+  database: web_app_production
   password: <%= ENV['API_DATABASE_PASSWORD'] %>

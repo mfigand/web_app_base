@@ -1,0 +1,61 @@
+name: Lints & Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build APP
+    runs-on: ubuntu-latest
+    
+    container:
+      image: ruby:2.7.1
+    
+    services:
+      postgres:
+        image: postgres:10.8
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: web_app_test
+        ports:
+        - 5432:5432
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+    - name: Set up Ruby 2.7.7
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.7.1
+    - name: Save cache in vendor
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Run bundle install
+      run: |
+        ruby -v
+        gem install bundler --no-document
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+    - name: Run Reek
+      run: |
+        bundle exec reek
+    - name: Run Rubocop
+      run: |
+        bundle exec rubocop
+    - name: Run Rspec
+      env:
+        RAILS_ENV: test
+        DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/web_app_test"
+      run: |
+        bundle exec rails db:prepare
+        bundle exec rspec
