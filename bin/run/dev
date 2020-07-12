@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function print_help {
+  cat <<HELP
+  ./run.sh dev <command> <arguments>
+  commands:
+  - sh: run shell
+  - console: run rails console
+  - server: run dev server
+HELP
+}
+
+function docker_wrapper {
+  docker-compose $@
+}
+
+function run_in_docker {
+  docker_wrapper run --rm web $@
+}
+
+case "$1" in
+  sh) run_in_docker /bin/bash;;
+  console) run_in_docker rails c;;
+  server) shift; docker_wrapper up $@;;
+  help) print_help; exit 0;;
+  *) print_help; exit 1;;
+esac

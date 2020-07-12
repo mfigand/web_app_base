@@ -1,0 +1,39 @@
+#!/bin/bash
+
+function run_in_docker {
+  # --rm tell Docker daemon that once its done running, erase everything related to it and save the disk space
+  docker-compose run --rm web $@
+}
+
+function print_help {
+  cat <<HELP
+  ./run.sh test <command> <arguments>
+  commands:
+  - create: run rails db:create RAILS_ENV=test
+  - setup: run db:create db:schema:load db:seed RAILS_ENV=test
+  - migrate: run rails db:migrate RAILS_ENV=test
+  - seed: run rails db:seed RAILS_ENV=test
+  - no_command: run rspec
+HELP
+}
+
+case "$1" in
+create)
+  run_in_docker rails db:create RAILS_ENV=test
+  ;;
+setup)
+  run_in_docker rails db:setup RAILS_ENV=test
+  ;;
+migrate)
+  run_in_docker rails db:migrate RAILS_ENV=test
+  ;;
+seed)
+  run_in_docker rails db:seed RAILS_ENV=test
+  ;;
+help)
+  print_help; exit 0
+  ;;
+*)
+  run_in_docker rspec $@
+  ;;
+esac

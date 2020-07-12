@@ -1,0 +1,21 @@
+---
+exclude_paths:
+  - db/migrate
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  UncommunicativeModuleName:
+    exclude:
+      - V1
+  UncommunicativeVariableName:
+    exclude:
+      - e
+  NilCheck:
+    exclude:
+  InstanceVariableAssumption:
+    exclude:
+      - ApplicationController
+  FeatureEnvy:
+    exclude:
+  TooManyInstanceVariables:
+    max_instance_variables: 7

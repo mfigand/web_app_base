@@ -7,25 +7,47 @@
 From root:
 
 Build the image
-* docker-compose build
+* ./run.sh build
 
-Create the database.
-* docker-compose run web rake db:create
+Prepare the database (./run.sh db help)
+* ./run.sh db prepare
 
-Boot the app
-* docker-compose up
+Boot the app (./run.sh dev help)
+* ./run.sh dev server
 
-Run specs
-(--rm tell Docker daemon that once its done running, erase everything related to it and save the disk space)
-* docker-compose run --rm web rspec
+Run specs (./run.sh test help)
+* ./run.sh test
+
+Run lints (rubocop -a && reek)
+* ./run.sh lint
 
 Run rubocop
-(--rm tell Docker daemon that once its done running, erase everything related to it and save the disk space)
-* docker-compose run --rm web rubocop
+* ./run.sh lint rubocop
+
+Run reek
+* ./run.sh lint reek
 
 Things you may want to cover:
 
-* Ruby version 2.5
+* Ruby version ruby-2.6.6
+
+* System dependencies
+  - docker
+  - docker-compose
+
+
+## Debug with pry
+
+* Steps:
+
+- Add 'binding.pry' in the breakpoint you want to set
+- Run app
+- Get container id with '$ docker ps' or '$ ctop'
+- Attach to the container with it's id '$ docker attach container_id'
+
+Things you may want to cover:
+
+* Ruby version 2.7.1
 
 * System dependencies
   - docker

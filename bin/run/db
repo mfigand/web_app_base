@@ -1,0 +1,39 @@
+#!/bin/bash
+
+function run_in_docker {
+  docker-compose run --rm web $@
+}
+
+function print_help {
+  cat <<HELP
+  ./run.sh db <command> <arguments>
+  commands:
+  - create: run rails db:create
+  - setup: run db:create db:schema:load db:seed
+  - prepare: run db:prepare
+  - migrate: run rails db:migrate
+  - seed: run rails db:seed
+  - no_command: run rails db:prepare
+HELP
+}
+
+case "$1" in
+create)
+  run_in_docker rails db:create
+  ;;
+setup)
+  run_in_docker rails db:setup
+  ;;
+migrate)
+  run_in_docker rails db:migrate
+  ;;
+seed)
+  run_in_docker rails db:seed
+  ;;
+help)
+  print_help; exit 0
+  ;;
+*)
+  run_in_docker rails db:setup $@
+  ;;
+esac

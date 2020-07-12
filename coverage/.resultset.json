@@ -1,32 +1,38 @@
 {
   "RSpec": {
     "coverage": {
-      "/app/app/helpers/application_helper.rb": [
-        null,
-        null,
-        1,
-        null
-      ],
-      "/app/app/controllers/api/v1/ping_controller.rb": [
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        2,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/app/app/controllers/application_controller.rb": [
-        null,
-        null,
-        1,
-        null
-      ]
+      "/app/app/helpers/application_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/app/controllers/api/v1/ping_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      }
     },
-    "timestamp": 1579345161
+    "timestamp": 1594570843
   }
 }
