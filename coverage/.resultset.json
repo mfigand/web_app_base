@@ -9,6 +9,30 @@
           null
         ]
       },
+      "/app/app/helpers/web/neighbour/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/app/app/helpers/web/neighbour/passwords_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/app/app/helpers/web/neighbour/sessions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/app/app/helpers/web/neighbour/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/app/app/controllers/api/v1/ping_controller.rb": {
         "lines": [
           null,
@@ -16,6 +40,8 @@
           1,
           1,
           1,
+          1,
+          null,
           1,
           2,
           null,
@@ -29,14 +55,111 @@
           null,
           null,
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/web/neighbour/home_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/web/neighbour/sessions_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/models/role.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/app/models/users_role.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
           null
         ]
       },
       "/app/app/models/user.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
-          4,
+          49,
+          null,
+          1,
+          1,
           null,
           1,
           1,
@@ -52,10 +175,135 @@
           1,
           0,
           null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
           null
         ]
+      },
+      "/app/app/controllers/web/neighbour/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/app/app/controllers/web/neighbour/passwords_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/app/app/controllers/web/neighbour/users_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/app/app/controllers/auth_failure_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1594590792
+    "timestamp": 1595264389
   }
 }

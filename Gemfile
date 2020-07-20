@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+# Mechanism for authentication in Rack based Ruby applications
+gem 'warden'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -59,7 +61,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Automatic Rails code style checking tool.
-  gem 'rubocop-rails'
+  gem 'rubocop-rails', '~> 2.6'
   # Code smells report
   gem 'reek'
 end

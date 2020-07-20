@@ -1,0 +1,15 @@
+<%= form_tag :users, :method => :post do %>
+	<%= label_tag :name, 'Nombre', class: '' %>
+	<%= text_field_tag :name, nil, :required => false, class: '' %>
+
+	<%= label_tag :lastname, 'Apellido', class: '' %>
+	<%= text_field_tag :lastname, nil, :required => false, class: '' %>
+
+	<%= label_tag :email, 'Email', class: '' %>
+	<%= email_field_tag :email, nil, :required => true, class: '' %>
+
+	<%= label_tag :password, 'Contraseña', class: '' %></p>
+	<%= password_field_tag :password, nil, :required => true, class: '' %>
+
+	<%= submit_tag 'Aceptar', class: '' %>
+<% end %>

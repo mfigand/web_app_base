@@ -2,7 +2,12 @@
 
 FactoryBot.define do
   sequence :email do |n|
-    "user#{n}@example.com"
+    mail = "user#{n}@example.com"
+    while User.find_by(email: mail) do
+      n = n + 1
+      mail = "user#{n}@example.com"
+    end
+    mail
   end
 end
 
@@ -14,13 +19,3 @@ FactoryBot.define do
     password_digest { '12345678' }
   end
 end
-
-# FactoryBot.define do
-#   factory :user do
-#     name { "MyString" }
-#     lastname { "MyString" }
-#     email { "MyString" }
-#     password_digest { "MyString" }
-#     deleted_at { "2020-07-12 21:27:33" }
-#   end
-# end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 SimpleCov.start 'rails' do
   SimpleCov.minimum_coverage 95
   add_filter 'app/channels'
