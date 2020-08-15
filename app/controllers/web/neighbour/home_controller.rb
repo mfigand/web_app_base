@@ -2,7 +2,7 @@
 
 module Web
   module Neighbour
-    class HomeController < ApplicationController
+    class HomeController < Web::Neighbour::ApplicationController
       def show; end
     end
   end

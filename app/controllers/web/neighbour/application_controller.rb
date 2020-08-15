@@ -3,7 +3,6 @@
 module Web
   module Neighbour
     class ApplicationController < ::ApplicationController
-      before_action :current_user
       helper_method :current_user
 
       private
