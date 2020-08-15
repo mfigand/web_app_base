@@ -22,5 +22,5 @@ case $1 in
     print_help; exit 0
     ;; 
   *)  run_in_docker rubocop -a $@
-      run_in_docker reek $@;;
+      # run_in_docker reek $@;;
 esac

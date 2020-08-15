@@ -1,6 +1,10 @@
 # README
 
 # web_app_base
+* Create users with roles
+* Authenticate with Warden
+* Manage policies with Pundit
+* Manage services with U-Case
 
 ## Install steps
 
