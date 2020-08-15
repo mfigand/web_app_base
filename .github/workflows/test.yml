@@ -13,6 +13,10 @@ jobs:
     
     container:
       image: ruby:2.7.1
+      
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
     
     services:
       postgres:
@@ -29,6 +33,15 @@ jobs:
     steps:
     - name: Check out Git repository
       uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+    uses: actions/setup-node@v1
+    with:
+      node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run build --if-present
+    - run: npm test
+      env:
+        CI: true
     - name: Set up Ruby 2.7.7
       uses: actions/setup-ruby@v1
       with:
