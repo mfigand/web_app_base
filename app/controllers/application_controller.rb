@@ -6,13 +6,10 @@ class ApplicationController < ActionController::Base
   private
 
   def redirect_if_not_logged_in
-    if current_user.nil?
-      redirect_to(new_sessions_path)
-    end
+    redirect_to(new_sessions_path) if current_user.nil?
   end
 
   def warden
     request.env['warden']
   end
 end
-

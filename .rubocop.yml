@@ -22,3 +22,10 @@ Metrics/BlockLength:
     - 'spec/**/*'
 Metrics/AbcSize:
   Max: 18
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+    

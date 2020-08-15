@@ -7,7 +7,7 @@ RSpec.describe Web::Neighbour::HomeController, type: :controller do
 
   before(:example) do
     neighbour.roles.create(name: 'neighbour')
-    stub_warden(request, neighbour)    
+    stub_warden(request, neighbour)
   end
 
   describe 'GET home' do

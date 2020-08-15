@@ -4,7 +4,7 @@ require "#{Rails.configuration.root}/lib/warden/strategies/admin/form.rb"
 require "#{Rails.configuration.root}/lib/warden/strategies/neighbour/form.rb"
 
 Rails.application.config.middleware.use Warden::Manager do |manager|
-  manager.failure_app = lambda { |env| AuthFailureController.action(env['warden.options'][:action]).call(env) }
+  manager.failure_app = ->(env) { AuthFailureController.action(env['warden.options'][:action]).call(env) }
 
   manager.scope_defaults :admin, strategies: [:admin_form], action: :web
   manager.scope_defaults :neighbour, strategies: [:neighbour_form], action: :web

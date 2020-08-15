@@ -3,8 +3,8 @@
 FactoryBot.define do
   sequence :email do |n|
     mail = "user#{n}@example.com"
-    while User.find_by(email: mail) do
-      n = n + 1
+    while User.find_by(email: mail)
+      n += 1
       mail = "user#{n}@example.com"
     end
     mail

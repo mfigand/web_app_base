@@ -2,7 +2,7 @@
 	<div class="">
 		<div class="">
 
-			<h1> Residencial Belmonte del Tajo </h1>
+			<h1> Log in </h1>
 
 			<%= form_tag :sessions, :method => :post do %>
 			  <%= label_tag :email, 'Email', class: '' %>
@@ -13,6 +13,9 @@
 			
 			  <%= submit_tag 'Aceptar', class: '' %>
 			<% end %>
+			<br>
+
+			<div>Or <%= link_to 'Sign up', new_users_path %></div>
 
 		</div>
 	</div>

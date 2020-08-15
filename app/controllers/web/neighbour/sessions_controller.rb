@@ -6,13 +6,12 @@ module Web
       skip_before_action :redirect_if_not_logged_in
 
       def create
-        if authenticate          
+        if authenticate
           redirect_to '/'
         else
           flash[:error] = 'Incorrect Email or Password'
           redirect_to new_sessions_path
         end
-        
       end
 
       def destroy

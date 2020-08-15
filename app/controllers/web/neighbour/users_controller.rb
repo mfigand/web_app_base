@@ -3,12 +3,11 @@
 module Web
   module Neighbour
     class UsersController < ApplicationController
-      before_action :authenticate_user, except: [:new, :create]
-
-      def new
-      end
+      skip_before_action :redirect_if_not_logged_in
 
       def create
+        user.roles.new(name: 3)
+
         if user.save
           flash[:notice] = 'Usuario creado con éxtio'
           redirect_to new_sessions_path
@@ -21,7 +20,7 @@ module Web
       private
 
       def user
-        @_user ||= User.new(user_params) 
+        @_user ||= User.new(user_params)
       end
 
       def user_params

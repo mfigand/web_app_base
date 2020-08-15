@@ -3,11 +3,11 @@
 module Web
   module Neighbour
     class PasswordsController < ApplicationController
-      def new
-      end
+      skip_before_action :redirect_if_not_logged_in
 
-      def create
-      end
+      def new; end
+
+      def create; end
     end
   end
 end

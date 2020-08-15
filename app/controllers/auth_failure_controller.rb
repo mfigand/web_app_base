@@ -6,7 +6,7 @@ class AuthFailureController < ActionController::Base
     redirect_to(new_sessions_path)
   end
 
-  def neighbour    
+  def neighbour
     redirect_to(new_sessions_path)
   end
 end

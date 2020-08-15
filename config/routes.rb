@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   scope module: 'web' do
     scope module: 'neighbour' do
       get '/', to: 'home#show', as: 'home'
-  
-      resources :passwords, only: [:create, :new]
 
-      resource :sessions, only: [:create, :new, :destroy]
+      resources :passwords, only: %i[create new]
 
-      resource :users, only: [:create, :new, :update, :destroy]
+      resource :sessions, only: %i[create new destroy]
+
+      resource :users, only: %i[create new update destroy]
     end
   end
 end

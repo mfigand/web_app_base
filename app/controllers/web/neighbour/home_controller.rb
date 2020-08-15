@@ -3,8 +3,7 @@
 module Web
   module Neighbour
     class HomeController < ApplicationController
-      def show
-      end
+      def show; end
     end
   end
 end

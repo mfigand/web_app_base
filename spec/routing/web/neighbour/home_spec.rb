@@ -7,7 +7,7 @@ RSpec.describe 'home routing' do
   let(:controller) { 'web/neighbour/home' }
 
   it { expect(get: '/').to route_to('web/neighbour/home#show') }
-  it do    
+  it do
     is_expected.to route_to(controller: controller,
                             action: 'show')
   end

@@ -20,7 +20,7 @@ module Web
       end
 
       def current_user
-        warden.user(scope: :neighbour)
+        warden.user(scope: :neighbour) || nil
       end
 
       def logout
