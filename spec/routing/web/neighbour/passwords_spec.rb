@@ -7,7 +7,7 @@ RSpec.describe 'passwords routing' do
 
   it 'should route to #new' do
     expect(get: '/passwords/new').to route_to(controller: controller,
-                                               action: 'new')
+                                              action: 'new')
   end
 
   it 'should route to #create' do

@@ -7,9 +7,9 @@ RSpec.describe Web::Neighbour::UsersController, type: :controller do
     it 'creates user succesfully' do
       get :create, params: { name: 'name',
                              lastname: 'lastname',
-                              email: 'email@example.com',
-                              password: 'Abc.1234' }
-            
+                             email: 'email@example.com',
+                             password: 'Abc.1234' }
+
       expect(flash[:notice]).to eq('Usuario creado con éxtio')
       expect(response).to redirect_to new_sessions_path
     end
@@ -24,9 +24,9 @@ RSpec.describe Web::Neighbour::UsersController, type: :controller do
 
       get :create, params: { name: user.name,
                              lastname: user.lastname,
-                              email: user.email,
-                              password: user.password }
-            
+                             email: user.email,
+                             password: user.password }
+
       expect(flash[:error]).to eq(user.errors.full_messages.to_sentence)
       expect(response).to redirect_to new_users_path
     end

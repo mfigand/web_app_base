@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
 
     it 'should soft delete user' do
       expect(user.deleted_at.present?).to be(false)
-      
+
       user.soft_delete
       expect(user.deleted_at.present?).to be(true)
     end
