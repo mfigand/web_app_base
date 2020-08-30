@@ -3,13 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe Web::Neighbour::UsersController, type: :controller do
-  # let(:neighbour) { create(:user) }
-
-  # before(:example) do
-  #   neighbour.roles.create(name: 'neighbour')
-  #   stub_warden(request, neighbour)
-  # end
-
   describe '#create' do
     it 'creates user succesfully' do
       get :create, params: { name: 'name',
@@ -18,7 +11,7 @@ RSpec.describe Web::Neighbour::UsersController, type: :controller do
                               password: 'Abc.1234' }
             
       expect(flash[:notice]).to eq('Usuario creado con éxtio')
-      expect(response.status).to redirect_to new_sessions_path
+      expect(response).to redirect_to new_sessions_path
     end
 
     it 'fails to create user' do
@@ -35,7 +28,7 @@ RSpec.describe Web::Neighbour::UsersController, type: :controller do
                               password: user.password }
             
       expect(flash[:error]).to eq(user.errors.full_messages.to_sentence)
-      expect(response.status).to redirect_to new_users_path
+      expect(response).to redirect_to new_users_path
     end
   end
 end
