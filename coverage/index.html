@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-30T14:22:05+00:00">2020-08-30T14:22:05+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-30T14:27:34+00:00">2020-08-30T14:27:34+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -150,7 +150,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#4a07c80a4841a4bea1d05c6d98daf9bb801c62d0" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">38</td>
+            <td class="cell--number">39</td>
             <td class="cell--number">18</td>
             <td class="cell--number">18</td>
             <td class="cell--number">0</td>
@@ -413,7 +413,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#4a07c80a4841a4bea1d05c6d98daf9bb801c62d0" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">38</td>
+            <td class="cell--number">39</td>
             <td class="cell--number">18</td>
             <td class="cell--number">18</td>
             <td class="cell--number">0</td>
@@ -2063,7 +2063,7 @@
 
             
 
-            <code class="ruby">                              1 number and 1 special character&#39;</code>
+            <code class="ruby">                              1 number and</code>
           </li>
         </div>
       
@@ -2074,12 +2074,23 @@
 
             
 
+            <code class="ruby">                              1 special character&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
@@ -2090,7 +2101,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="28" data-linenumber="11">
+          <li class="covered" data-hits="28" data-linenumber="12">
             <span class="hits">28</span>
             
 
@@ -2101,24 +2112,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  has_many :users_roles, dependent: :destroy</code>
           </li>
         </div>
       
@@ -2129,29 +2129,29 @@
 
             
 
+            <code class="ruby">  has_many :users_roles, dependent: :destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  has_many :roles, through: :users_roles</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  validates :name, :lastname, length: { maximum: 250 }</code>
           </li>
         </div>
       
@@ -2162,7 +2162,7 @@
 
             
 
-            <code class="ruby">  validates :email, presence: true, uniqueness: true</code>
+            <code class="ruby">  validates :name, :lastname, length: { maximum: 250 }</code>
           </li>
         </div>
       
@@ -2173,18 +2173,18 @@
 
             
 
-            <code class="ruby">  validates :password, presence: true,</code>
+            <code class="ruby">  validates :email, presence: true, uniqueness: true</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                       format: { with: PASSWORD_REQUIREMENTS,</code>
+            
+
+            <code class="ruby">  validates :password, presence: true,</code>
           </li>
         </div>
       
@@ -2195,7 +2195,7 @@
 
             
 
-            <code class="ruby">                                 message: PASSWORD_REQUIREMENTS_MSG },</code>
+            <code class="ruby">                       format: { with: PASSWORD_REQUIREMENTS,</code>
           </li>
         </div>
       
@@ -2206,7 +2206,7 @@
 
             
 
-            <code class="ruby">                       if: :password</code>
+            <code class="ruby">                                 message: PASSWORD_REQUIREMENTS_MSG },</code>
           </li>
         </div>
       
@@ -2217,18 +2217,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">                       if: :password</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">  def admin?</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2239,18 +2239,18 @@
 
             
 
-            <code class="ruby">    roles&amp;.pluck(:name)&amp;.include?(&#39;admin&#39;)</code>
+            <code class="ruby">  def admin?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    roles&amp;.pluck(:name)&amp;.include?(&#39;admin&#39;)</code>
           </li>
         </div>
       
@@ -2261,18 +2261,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">  def neighbour?</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2283,18 +2283,18 @@
 
             
 
-            <code class="ruby">    roles&amp;.pluck(:name)&amp;.include?(&#39;neighbour&#39;)</code>
+            <code class="ruby">  def neighbour?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    roles&amp;.pluck(:name)&amp;.include?(&#39;neighbour&#39;)</code>
           </li>
         </div>
       
@@ -2305,18 +2305,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="31">
+            
             
 
             
 
-            <code class="ruby">  def soft_delete</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2327,18 +2327,18 @@
 
             
 
-            <code class="ruby">    update(deleted_at: Time.now.utc)</code>
+            <code class="ruby">  def soft_delete</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    update(deleted_at: Time.now.utc)</code>
           </li>
         </div>
       
@@ -2349,18 +2349,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="35">
+            
             
 
             
 
-            <code class="ruby">  def superadmin?</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2371,12 +2371,23 @@
 
             
 
+            <code class="ruby">  def superadmin?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    roles&amp;.pluck(:name)&amp;.include?(&#39;superadmin&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -2387,7 +2398,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
