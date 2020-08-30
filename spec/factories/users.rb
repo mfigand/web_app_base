@@ -16,6 +16,6 @@ FactoryBot.define do
     name { 'Name' }
     lastname { 'Lastname' }
     email { generate :email }
-    password_digest { '12345678' }
+    password_digest { 'Abc.1234' }
   end
 end
