@@ -6,11 +6,13 @@
                          new_sessions GET    /sessions/new(.:format)                                                                  web/neighbour/sessions#new
                              sessions DELETE /sessions(.:format)                                                                      web/neighbour/sessions#destroy
                                       POST   /sessions(.:format)                                                                      web/neighbour/sessions#create
-                            new_users GET    /users/new(.:format)                                                                     web/neighbour/users#new
-                                users PATCH  /users(.:format)                                                                         web/neighbour/users#update
-                                      PUT    /users(.:format)                                                                         web/neighbour/users#update
-                                      DELETE /users(.:format)                                                                         web/neighbour/users#destroy
-                                      POST   /users(.:format)                                                                         web/neighbour/users#create
+                                users POST   /users(.:format)                                                                         web/neighbour/users#create
+                             new_user GET    /users/new(.:format)                                                                     web/neighbour/users#new
+                            edit_user GET    /users/:id/edit(.:format)                                                                web/neighbour/users#edit
+                                 user GET    /users/:id(.:format)                                                                     web/neighbour/users#show
+                                      PATCH  /users/:id(.:format)                                                                     web/neighbour/users#update
+                                      PUT    /users/:id(.:format)                                                                     web/neighbour/users#update
+                                      DELETE /users/:id(.:format)                                                                     web/neighbour/users#destroy
         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
         rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                  action_mailbox/ingresses/sendgrid/inbound_emails#create

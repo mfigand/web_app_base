@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 # Mechanism for authentication in Rack based Ruby applications
 gem 'warden'
+# Policies authorization system
+gem 'pundit'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

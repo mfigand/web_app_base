@@ -1,7 +1,11 @@
 <header class="">
 	<nav class="">
 	  <div class="">
+			<%= link_to 'Home', home_path %>
+
 			<% if current_user %>
+			<%= link_to 'Profile', user_path(current_user) %>
+
 	    <%= link_to "Salir", sessions_path, method: :delete, data: { confirm: '¿Estás seguro?' }, class: '' %>
 	    <% end %>
 	  </div>

@@ -20,6 +20,8 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+Metrics/MethodLength:
+  Max: 15
 Metrics/AbcSize:
   Max: 18
 Naming/MemoizedInstanceVariableName:

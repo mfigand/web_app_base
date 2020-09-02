@@ -5,6 +5,7 @@ SimpleCov.start 'rails' do
   add_filter 'app/controllers/web/neighbour/application_controller.rb'
   add_filter 'app/controllers/web/neighbour/sessions_controller.rb'
   add_filter 'app/controllers/auth_failure_controller.rb'
+  add_filter 'app/policies/application_policy.rb'
   add_filter 'app/channels'
   add_filter 'app/jobs'
   add_filter 'app/mailers'
