@@ -23,6 +23,8 @@ module Web
         if policy(@user).show?
           render :show
         else
+          flash[:error] = "Unauthorized user, can't show page"
+
           redirect_to home_path, status: :unauthorized
         end
       end
@@ -33,6 +35,8 @@ module Web
         if policy(@user).edit?
           render :edit
         else
+          flash[:error] = "Unauthorized user, can't edit"
+
           redirect_to home_path, status: :unauthorized
         end
       end

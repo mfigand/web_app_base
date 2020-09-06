@@ -9,5 +9,9 @@ class AuthFailureController < ActionController::Base
   def neighbour
     redirect_to(new_sessions_path)
   end
+
+  def unauthenticated
+    redirect_to(home_path)
+  end
 end
 # rubocop:enable Rails/ApplicationController
