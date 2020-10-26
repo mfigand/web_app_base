@@ -1,8 +1,10 @@
                                Prefix Verb   URI Pattern                                                                              Controller#Action
                           api_v1_ping GET    /api/v1/ping(.:format)                                                                   api/v1/ping#ping
                                  home GET    /                                                                                        web/neighbour/home#show
-                            passwords POST   /passwords(.:format)                                                                     web/neighbour/passwords#create
-                         new_password GET    /passwords/new(.:format)                                                                 web/neighbour/passwords#new
+                        new_passwords GET    /passwords/new(.:format)                                                                 web/neighbour/passwords#new
+                            passwords PATCH  /passwords(.:format)                                                                     web/neighbour/passwords#update
+                                      PUT    /passwords(.:format)                                                                     web/neighbour/passwords#update
+                                      POST   /passwords(.:format)                                                                     web/neighbour/passwords#create
                          new_sessions GET    /sessions/new(.:format)                                                                  web/neighbour/sessions#new
                              sessions DELETE /sessions(.:format)                                                                      web/neighbour/sessions#destroy
                                       POST   /sessions(.:format)                                                                      web/neighbour/sessions#create

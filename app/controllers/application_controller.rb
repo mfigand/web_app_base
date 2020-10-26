@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Pundit
+  helper_method :current_user
   before_action :redirect_if_not_logged_in
 
   private

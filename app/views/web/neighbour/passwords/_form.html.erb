@@ -1,0 +1,21 @@
+<%= form_tag :passwords, :method => :put do %>
+	<div>
+		<%= label_tag :old_password, 'Contraseña actual', class: '' %>
+		<%= password_field_tag :old_password, nil, :required => true, class: '' %>
+	</div>
+	<br>
+
+	<div>
+		<%= label_tag :new_password, 'Nueva contraseña', class: '' %>
+		<%= password_field_tag :new_password, nil, :required => true, class: '' %>
+	</div>
+	<br>
+
+	<div>
+		<%= label_tag :new_password_confirmation, 'Confirma nueva contraseña', class: '' %>
+		<%= password_field_tag :new_password_confirmation, nil, :required => true, class: '' %>
+	</div>
+	<br>
+
+	<%= submit_tag 'Guardar', class: '' %>
+<% end %>

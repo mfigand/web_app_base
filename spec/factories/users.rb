@@ -16,6 +16,6 @@ FactoryBot.define do
     name { 'Name' }
     lastname { 'Lastname' }
     email { generate :email }
-    password_digest { 'Abc.1234' }
+    password_digest { BCrypt::Password.create('Abc.1234') }
   end
 end

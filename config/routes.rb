@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     scope module: 'neighbour' do
       get '/', to: 'home#show', as: 'home'
 
-      resources :passwords, only: %i[create new]
+      resource :passwords, only: %i[create new update]
 
       resource :sessions, only: %i[create new destroy]
 

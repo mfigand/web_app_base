@@ -16,7 +16,11 @@
   <div>
     <% if policy(@user).edit? %>
       <%= link_to 'Edit profile', edit_user_path(@user) %>
+      <br>
+
+      <%= link_to 'Edit password', new_passwords_path(@user) %>
     <% end %>
+    <br>
 
     <%= link_to 'Back', :back %>
   </div>

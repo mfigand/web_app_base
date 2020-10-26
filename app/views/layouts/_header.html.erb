@@ -6,7 +6,7 @@
 			<% if current_user %>
 			<%= link_to 'Profile', user_path(current_user) %>
 
-	    <%= link_to "Salir", sessions_path, method: :delete, data: { confirm: '¿Estás seguro?' }, class: '' %>
+	    <%= link_to "Salir", new_sessions_path, method: :delete, data: { confirm: '¿Estás seguro?' }, class: '' %>
 	    <% end %>
 	  </div>
 	</nav>
